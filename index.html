@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!-- 
+
+********************************************************************
+                      T5Y_LOADINGSCREEN
+
+                    CONTACT: @tahayavuuz
+********************************************************************
+FiveM: https://forum.fivem.net/u/tahayavuuz
+Github: https://github.com/tahayavuuz
+Discord: Taha Yavuz#0037
+
+!-->
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	
+    <title>CONNECTING TO THE SERVER</title>				    
+<style type="text/css">
+body { color: #ffffff; background: #000000; }
+</style>
+
+	  
+<!-- Background Slider -->
+<script src="js/jquery-1.11.0.min.js"></script>
+<script src="js/jquery.backstretch.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.ajaxchimp.js"></script>
+<script src="js/lj-safety-first.js"></script>
+	  
+	  
+	  
+<!-- Background transition CSS -->
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+<header>
+<!-- Infobox -->
+<div id="infobox"><p style="position: absolute; top: 80px; right: 20px;">
+
+  </p></div>
+
+			<!-- Loader (Don't mess with settings) -->
+      <div id="loading"><p style="position: absolute; right: 0px; bottom: -20px; border:0px; border-style:solid; border-color:; backgrund: ; padding: 1.4em; width: 280px; opacity: 0.85;"><font face="revamped" size="3">Server Loading  </font><font color="#000000"></font>   <img src="img/loading.gif" style="width:35px;height:35px;"></p></div>
+			
+
+			<!-- Background music -->
+    	<div style="display:none"><audio controls id="audio" autoplay="autoplay" onloadeddata="setHalfVolume()">
+	<source src="music/loadscreen.mp3" type="audio/mpeg"> <!-- Music name -->
+	Music has stopped working.
+	</audio>
+<script>	function setHalfVolume() {
+    var myAudio = document.getElementById("audio");  
+    myAudio.volume = 0.1; //You can set the volume in 1-0.1 way.
+}</script></div>
+
+
+			<!-- Infobox slider -->
+      <script>			var slideIndex = 0;
+        carousel();
+        
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("infoboxslide");
+            for (i = 0; i < x.length; i++) {
+              x[i].style.display = "none"; 
+            }
+            slideIndex++;
+            if (slideIndex > x.length) {slideIndex = 1} 
+            x[slideIndex-1].style.display = "block"; 
+            setTimeout(carousel, 15000); // The visual changes in the specified second. 15 Second.
+        }
+        </script>
+			
+			
+
